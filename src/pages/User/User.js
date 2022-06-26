@@ -42,7 +42,7 @@ const User = () => {
 				? 'error component'
 				: <>
 					<div>
-						{JSON.stringify(userGetSuccess)}
+						<pre>{JSON.stringify(userGetSuccess, null, 2)}</pre>
 					</div>
 				</>
 			}

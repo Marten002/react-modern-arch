@@ -9,6 +9,9 @@ export const Routing = {
 			},
 			add: {
 				index: '/users/user/add'
+			},
+			add2: {
+				index: '/users/user/add2'
 			}
 		}
 	},
