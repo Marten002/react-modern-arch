@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 import Header from './components/Header/Header'
 import Users from './pages/Users/Users'
@@ -7,8 +8,11 @@ import Home from './pages/Home/Home'
 import User from './pages/User/User'
 import UserAdd from './pages/UserAdd/UserAdd'
 import UserAdd2 from './pages/UserAdd2/UserAdd2'
+import UserAdd3 from './pages/UserAdd3/UserAdd3'
 
 import { Routing } from './routing'
+
+const queryClient = new QueryClient()
 
 const App = () => {
 	return (
@@ -22,6 +26,11 @@ const App = () => {
 					<Route exact={true} path={Routing.users.user.user.index} element={<User />} />
 					<Route exact={true} path={Routing.users.user.add.index} element={<UserAdd />} />
 					<Route exact={true} path={Routing.users.user.add2.index} element={<UserAdd2 />} />
+					<Route exact={true} path={Routing.users.user.add3.index} element={
+						<QueryClientProvider client={queryClient}>
+							<UserAdd3 />
+						</QueryClientProvider>
+					} />
 					<Route exact={true} path={Routing.error['404']} element={<div>404</div>} />
 				</Routes>
 			</Suspense>
