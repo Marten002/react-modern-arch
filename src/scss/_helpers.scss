@@ -1,0 +1,29 @@
+@import './colors';
+
+.w-100 {
+    width: 100%;
+}
+
+.color-error {
+    color: $color-error !important;
+}
+
+.color-warning {
+    color: $color-warning !important;
+}
+
+.color-information {
+    color: $color-information !important;
+}
+
+.color-link {
+    color: $color-link !important;
+}
+
+.color-default {
+    color: $color-default !important;
+}
+
+.color-success {
+    color: $color-success !important;
+}
