@@ -15,7 +15,9 @@ export function users(state = initialState, action) {
 		case usersActionTypes.USERS_GET_REQUEST:
 			return {
 				...state,
-				usersGetIsFetching: true
+				usersGetIsFetching: true,
+				usersGetSuccess: null,
+				usersGetFailure: null
 			}
 		case usersActionTypes.USERS_GET_SUCCESS:
 			return {

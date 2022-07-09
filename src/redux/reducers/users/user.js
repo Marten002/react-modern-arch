@@ -2,7 +2,7 @@ export const userActionTypes = {
 	USER_GET_REQUEST: 'USER_GET_REQUEST',
 	USER_GET_SUCCESS: 'USER_GET_SUCCESS',
 	USER_GET_FAILURE: 'USER_GET_FAILURE',
-	
+
 	USER_POST_REQUEST: 'USER_POST_REQUEST',
 	USER_POST_SUCCESS: 'USER_POST_SUCCESS',
 	USER_POST_FAILURE: 'USER_POST_FAILURE',
@@ -25,7 +25,9 @@ export function user(state = initialState, action) {
 		case userActionTypes.USER_GET_REQUEST:
 			return {
 				...state,
-				userGetIsFetching: true
+				userGetIsFetching: true,
+				userGetSuccess: null,
+				userGetFailure: null
 			}
 		case userActionTypes.USER_GET_SUCCESS:
 			return {
@@ -44,7 +46,9 @@ export function user(state = initialState, action) {
 		case userActionTypes.USER_POST_REQUEST:
 			return {
 				...state,
-				userPostIsFetching: true
+				userPostIsFetching: true,
+				userPostSuccess: null,
+				userPostFailure: null
 			}
 		case userActionTypes.USER_POST_SUCCESS:
 			return {
